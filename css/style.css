@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+/* common css */
+.container-fluid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+
+}
+
+
+/* header css */
+.header {
+    height: 12vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.header-container {
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container .logo {
+    width: 12vw;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+}
+
+.header-container .logo img {
+    width: 100%;
+    object-fit: contain;
+    cursor: pointer;
+
+}
+
+.btn {
+    border: none;
+    border-radius: 3px;
+    background: #7149a3;
+    padding: 8px 18px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #fff;
+
+}
+
+/* main css */
+
+.main {
+    padding: 50px 0;
+}
+
+.card-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 450px;
+    gap: 25px;
+
+}
+
+.card-container .item {
+    border-radius: 5px;
+    background-color: #fcfcfc;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    cursor: pointer;
+    transition: .2s;
+    overflow: hidden;
+}
+
+.card-container .item:hover {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.item .card_img {
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+}
+
+.item .card_img img {
+    width: 100%;
+}
+
+.item .card_info {
+    padding: 5px 10px;
+}
+
+.item .sponsored {
+    font-size: .9rem;
+    color: #999;
+}
+
+.item .brand_name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #808080;
+}
+
+.item .product_info {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #323030;
+}
+
+.item .price_container {
+    padding: 4px 0;
+}
+
+.price_container .product_price {
+    font-size: 1rem;
+    color: #000;
+    font-weight: 700;
+
+}
+
+.price_container .real_price {
+    text-decoration: line-through;
+    font-size: 1rem;
+    color: #b8b6b6;
+    font-weight: 600;
+    padding: 0 3px;
+}
+
+.price_container .product_discount {
+    color: brown;
+    font-size: .9rem;
+    font-weight: 700;
+
+}
+
+.item .card_info .deal {
+    font-size: .8rem;
+    font-weight: 700;
+    padding: 4px;
+    background-color: #adadad;
+    color: brown;
+}
+
+
+
+/* Filter Modal  */
+
+.filterBox {
+    width: 380px;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0px;
+    left: -380px;
+    transition: all .3s;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 6px 6px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+}
+
+
+.filter-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+
+}
+
+.textInp {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    outline: none;
+    margin-bottom: 15px;
+
+}
+
+.title {
+    color: #353434;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+label {
+    font: 1rem;
+}
+
+.price-cont {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.price-cont .price_item {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    box-sizing: border-box;
+}
+
+.price-item>input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.brandContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 30px;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* 
+.brands{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    width: 50%;
+    column-gap: 20px;
+    margin-bottom: 20px;
+} */

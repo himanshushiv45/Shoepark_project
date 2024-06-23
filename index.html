@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoepark | Home</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- header section -->
+    <header class="container-fluid header">
+        <div class="container header-container">
+            <div class="logo"><img src="./media/logo.png" alt=""></div>
+            <button class="btn" onclick="filter()">Filter</button>
+        </div>
+
+    </header>
+
+    <!-- main-section -->
+    <main class="container-fluid main">
+        <div class="container card-container" id="card_container">
+
+
+        </div>
+
+    </main>
+
+
+    <!-- Filter Modal -->
+    <div class="filterBox" id="filterModal">
+        <h2 class="filter-title">Filter Data</h2>
+        <input type="text" class="textInp" placeholder="Search shoes.." onkeyup="setValue('name', this.value),filterData()">
+
+        <h3 class="title">Select Price Range</h3>
+        <div class="price-cont">
+            <div class="price-item">
+                <label for="">Min Price</label>
+                <input type="number" onkeyup="setValue('minPrice', this.value)">
+            </div>
+            <div class="price-item">
+                <label for="">Max Price</label>
+                <input type="number" onkeyup="setValue('maxPrice', this.value)">
+            </div>
+        </div>
+
+        <h3 class=" title">Select Brands</h3>
+        <div class="brandContainer">
+            <div class="brand-item">
+                <label for="">SPORT FASSION</label>
+                <input type="radio" name="brand" onclick="setValue('brand', 'SPORT FASSION' )">
+            </div>
+            <div class="brand-item">
+                <label for="">URBANBOX</label>
+                <input type="radio" name="brand" onclick="setValue('brand', 'URBANBOX')">
+            </div>
+            <div class="brand-item">
+                <label for="">HOTSTYLE<label>
+                        <input type="radio" name="brand" onclick="setValue('brand', 'HOTSTYLE')">
+            </div>
+            <div class=" brand-item">
+                <label for="">PUMA<label>
+                        <input type="radio" name="brand" onclick="setValue('brand', 'PUMA')">
+            </div>
+        </div>
+
+        <h3 class="title">Select Colors</h3>
+        <div class="brandContainer">
+            <div class="color">
+                <label for="">White</label>
+                <input type="checkbox" name="white" onchange="getCheckedColor()">
+            </div>
+            <div class="brand-item">
+                <label for="">Black</label>
+                <input type="checkbox" name="black" onchange="getCheckedColor()">
+            </div>
+            <div class="brand-item">
+                <label for="">Blue<label>
+                        <input type="checkbox" name="blue" onchange="getCheckedColor()">
+            </div>
+            <div class=" brand-item">
+                <label for="">Red<label>
+                        <input type="checkbox" name="red" onchange="getCheckedColor()">
+            </div>
+        </div>
+        <h3 class="title">Select Size</h3>
+        <div class="brandContainer">
+            <div class="size">
+                <label for="">7</label>
+                <input type="radio" name="brand" onclick="setValue('size','7')">
+            </div>
+            <div class="size">
+                <label for="">8</label>
+                <input type="radio" name="brand" onclick="setValue('size','8')">
+            </div>
+            <div class="size">
+                <label for="">9</label>
+                <input type="radio" name="brand" onclick="setValue('size','9')">
+            </div>
+            <div class="size">
+                <label for="">10</label>
+                <input type="radio" name="brand" onclick="setValue('size','10')">
+            </div>
+        </div>
+
+        <button type="submit" class="btn" onclick="filter(),filterData()">SUBMIT</button>
+    </div>
+
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
